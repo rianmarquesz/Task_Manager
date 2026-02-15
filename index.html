@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and elegant task manager to organize your daily activities">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <h1 class="app__title">Task Manager</h1>
+        <p class="app__subtitle">Stay organized and productive</p>
+      </header>
+
+      <main class="app__main">
+        <section class="task-input">
+          <form class="task-input__form" aria-labelledby="add-task-heading">
+            <h2 id="add-task-heading" class="sr-only">Add a new task</h2>
+            <div class="task-input__wrapper">
+              <input
+                type="text"
+                id="task-input"
+                class="task-input__field"
+                placeholder="What needs to be done?"
+                aria-label="Enter a new task"
+                autocomplete="off"
+              >
+              <button
+                type="submit"
+                class="task-input__button"
+                aria-label="Add task"
+              >
+                Add Task
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="tasks" aria-label="Task list">
+          <div class="tasks__header">
+            <h2 class="tasks__title">My Tasks</h2>
+            <span class="tasks__count" aria-live="polite" aria-atomic="true">
+              <span id="task-count">0</span> task<span id="task-plural">s</span>
+            </span>
+          </div>
+
+          <div class="tasks__container">
+            <ul id="task-list" class="tasks__list" role="list">
+              <!-- Tasks will be inserted here -->
+            </ul>
+            <div id="empty-state" class="tasks__empty">
+              <p>No tasks yet. Add one to get started!</p>
+            </div>
+          </div>
+
+          <div class="tasks__filters">
+            <button
+              class="tasks__filter tasks__filter--all active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              class="tasks__filter tasks__filter--active"
+              data-filter="active"
+              aria-pressed="false"
+            >
+              Active
+            </button>
+            <button
+              class="tasks__filter tasks__filter--completed"
+              data-filter="completed"
+              aria-pressed="false"
+            >
+              Completed
+            </button>
+          </div>
+        </section>
+
+        <section class="stats">
+          <div class="stats__item">
+            <span class="stats__label">Total Tasks:</span>
+            <span class="stats__value" id="total-count">0</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__label">Completed:</span>
+            <span class="stats__value" id="completed-count">0</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__label">Remaining:</span>
+            <span class="stats__value" id="remaining-count">0</span>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app__footer">
+        <p>&copy; 2026 Task Manager. Built with HTML, CSS, and JavaScript.</p>
+      </footer>
+    </div>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
