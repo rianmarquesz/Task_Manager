@@ -1,6 +1,6 @@
 # Task Manager
 
-Uma aplicação simples e elegante para gerenciar tarefas diárias com suporte a tema claro/escuro e armazenamento local.
+Uma aplicação simples e elegante para gerenciar tarefas diárias com suporte a tema claro/escuro e armazenamento local. Acesse aqui: https://rianmarquesz.github.io/Task_Manager/
 
 ## 📋 Características
 
