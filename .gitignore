@@ -15,6 +15,7 @@ pnpm-lock.yaml
 .classpath
 .c9/
 *.sublime-workspace
+.github
 
 # Build
 dist/
